@@ -1,46 +1,27 @@
-console.log('Hello world');
-// console.error('This is an error');
+console.log(window);
 
-// var, let and const. Don't use var. 
+// // Single element 
+// const form = document.getElementById('my-form');
+// const querySelector = document.querySelector('h1');
 
-// Data types: primitive (string, number, bool, null, undefined, symbol)
 
-// Constructor function
-function Person(firstName, lastName, dateOfBirth) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.dateOfBirth = new Date(dateOfBirth);
-    // Method - fxn within a constructor 
-}
+// // Multiple element
+// console.log(document.querySelectorAll('.item'));
+// console.log(document.getElementsByClassName('item'));
 
-Person.prototype.getBirthYear = function() {
-    return this.dateOfBirth.getFullYear();
-}
+// const items = document.querySelectorAll('.item');
 
-Person.prototype.getFullName = function() {
-    return `${this.firstName} ${this.lastName}`
-}
+// items.forEach((item) => console.log(item));
 
-// Instantiate an object 
-const person1 = new Person('Kitty', 'Morgan', '9-29-1996');
-console.log(person1);
-console.log(person1.getBirthYear());
+const ul = document.querySelector('.items');
 
-// ==========================================================
+// ul.remove();
 
-// Class
-class Person {
-    constructor(firstName, lastName, dateOfBirth) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.dateOfBirth = new Date(dateOfBirth);
-    }
+// ul.lastElementChild.remove();
 
-    getBirthYear() {
-        return this.dateOfBirth.getFullYear();
-    }
+ul.firstElementChild.textContent = 'Hello';
+ul.children[1].innerText = 'Brad';
+ul.lastElementChild.innerHTML = '<h1>Hello</h1>'
 
-    getFullName() {
-        return `${this.firstName} ${this.lastName}`
-    }
-}
+const btn = document.querySelector('.btn');
+btn.style.background = 'red';
